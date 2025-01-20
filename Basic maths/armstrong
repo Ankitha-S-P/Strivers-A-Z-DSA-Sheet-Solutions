@@ -1,0 +1,12 @@
+#include <bits/stdc++.h> 
+bool isArmstrong(int num) {
+    long long sum=0;
+    long long n=num;
+    int len=to_string(num).length();
+    while(num>0){
+        int digit=num%10;
+        sum+=pow(digit,len);
+        num/=10;
+    }
+    return (n==sum);
+}
